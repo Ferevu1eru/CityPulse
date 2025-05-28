@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityPulse22</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 25%;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+        input {
+            width: 80%;
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        input::placeholder {
+            color: #666;
+        }
+        .map {
+            width: 75%;
+            background: url('https://via.placeholder.com/1000x800') no-repeat center;
+            background-size: cover;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .header a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">КОНЦЕРТЫ</a>
+        <a href="#">ТЕАТР</a>
+        <a href="#">КИНО</a>
+        <a href="#">КАТКИ</a>
+        <a href="#">ДЕТЯМ</a>
+        <a href="#">ВОЙТИ</a>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" placeholder="ВЫБЕРИТЕ СОБЫТИЕ">
+            <input type="text" placeholder="ВЫБЕРИТЕ МЕСТО">
+            <input type="date" placeholder="ВЫБЕРИТЕ ДАТУ">
+            <input type="time" placeholder="ВЫБЕРИТЕ ВРЕМЯ">
+        </div>
+        <div class="map"></div>
+    </div>
+</body>
+</html>

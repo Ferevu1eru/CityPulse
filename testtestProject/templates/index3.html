@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityPulse</title>
+    <link rel="stylesheet" href="E:/Works_Backup/VKR/Finalversion/css/leaflet.css"/>
+    <link rel="stylesheet" href="E:/Works_Backup/VKR/Finalversion/css/leaflet-routing-machine.css"/>
+    <link rel="stylesheet" href="E:/Works_Backup/VKR/Finalversion/css/index.css"/>
+    <style></style>
+</head>
+<body>
+<base href="E:/Works_Backup/VKR/Finalversion/">
+<div class="all_page">
+    <header class="block">
+        <div class="logo"></div>
+        <div class="button-holder">
+            <button class="header-btn" id="music-btn">МУЗЫКАЛЬНЫЕ КОНЦЕРТЫ</button>
+            <button class="header-btn" id="comedy-btn">КОМЕДИЙНЫЕ КОНЦЕРТЫ</button>
+        </div>
+    </header>
+    <div class="content-panel">
+        <!-- Поиск -->
+        <section class="search-section">
+            <h2 class="u_know">Знаете куда хотите сходить?</h2>
+            <p class="choose_place_look">Выберите место и посмотрите, что сегодня в программе</p>
+            <div class="search-bar">
+                <input id="search-input" type="text" placeholder="Поиск мероприятий...">
+                <button id="search-button">Найти</button>
+                <!-- Контейнер для подсказок (должен быть именно с этим id) -->
+                <div id="suggestions" class="suggestions-container"></div>
+            </div>
+
+            <!-- Выбор страниц/Календарь -->
+            <section class="calendar-section">
+                <div class="calendar-days" id="days-container"></div>
+            </section>
+
+            <!-- Мероприятия -->
+            <section class="events-section" id="events-container">
+                <!-- Карточки будут добавляться динамически через JavaScript -->
+            </section>
+            <!-- Скрываем и открываем -->
+            <button class="toggle-panel" onclick="document.querySelector('.content-panel').classList.toggle('active')">☰
+            </button>
+        </section> <!-- Закрывающий тег для section class="search-section" -->
+    </div> <!-- Закрывающий тег для div class="content-panel" -->
+    <!-- Блок автора -->
+    <div class="author_LS">
+        <p class="student">Подготовил студент</p>
+        <p class="name_author">Семенов Леонид РСБО-02-21</p>
+    </div>
+</div>
+<div id="map"></div>
+
+<script src="E:/Works_Backup/VKR/Finalversion/js/leaflet.js"></script>
+<script src="E:/Works_Backup/VKR/Finalversion/js/leaflet-routing-machine.js"></script>
+<script src="E:/Works_Backup/VKR/Finalversion/js/Control.Geocoder.js"></script>
+<script src="E:/Works_Backup/VKR/Finalversion/js/index.js"></script>
+</body>
+</html>
